@@ -3,7 +3,5 @@ parameters:
         - ./bypass-final-bootstrap.php
 
     excludePaths:
-        analyseAndScan:
-            - */.git/*
-        analyse:
-            - */vendor/*
+        - */.git/*
+        - */vendor/*
