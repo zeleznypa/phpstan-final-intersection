@@ -1,0 +1,38 @@
+{
+    "name": "interitty/phpstan-final-intersection",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Zeleznypa\\PhpstanFinalIntersection\\": [
+                "src/",
+                "tests/"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "Pavel Železný",
+            "email": "pavel.zelezny@interitty.org"
+        }
+    ],
+    "require": {
+        "dg/bypass-finals": "~1.4",
+        "phpunit/phpunit": "~9.6",
+        "phpstan/extension-installer": "~1.2",
+        "phpstan/phpstan": "~1.9",
+        "phpstan/phpstan-phpunit": "~1.3"
+    },
+    "config": {
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "cleaner-ignore": {
+            "phpunit/phpunit": [
+                "phpunit.xsd",
+                "schema"
+            ]
+        }
+    }
+}
