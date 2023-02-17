@@ -1,3 +1,9 @@
+## Long story short: It is not possible to use `DG\bypass-final` ##
+
+It will fail on work with PHPStan like this repository shows.
+
+It was discussed with author: https://github.com/phpstan/phpstan/issues/8901
+
 The `main` branch shows the simple code, where `DG\bypass-final` works.
 
 Each other branch shows, that simple non-relevat code can lead to the issue with unresolvable type when there is
