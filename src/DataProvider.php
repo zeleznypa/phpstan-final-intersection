@@ -11,7 +11,7 @@ trait DataProvider
      */
     public static function stringDataProvider(): array
     {
-        return ['A'];
+        return ['A', 'B'];
     }
 
 }
