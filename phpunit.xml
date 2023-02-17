@@ -14,7 +14,15 @@
     stopOnRisky="false"
     verbose="true">
     <extensions>
-        <extension class="Zeleznypa\PhpstanFinalIntersection\BypassFinalHook"/>
+        <extension class="Zeleznypa\PhpstanFinalIntersection\BypassFinalHook">
+            <arguments>
+                <array>
+                    <element key="0">
+                        <string>Nette\Application\UI\Link</string>
+                    </element>
+                </array>
+            </arguments>
+        </extension>
     </extensions>
     <coverage processUncoveredFiles="true">
         <include>

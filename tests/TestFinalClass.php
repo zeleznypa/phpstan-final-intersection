@@ -7,6 +7,7 @@ namespace Zeleznypa\PhpstanFinalIntersection;
 use Nette\Application\UI\Link;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
+use ReflectionClass;
 
 class TestFinalClass extends TestCase
 {
@@ -20,6 +21,10 @@ class TestFinalClass extends TestCase
         $key = 'key';
         $value = 'value';
         $finalClass = $this->createLinkMock();
+
+        $reflection = new ReflectionClass($finalClass);
+        self::assertFalse($reflection->isFinal());
+
         $finalClass->setParameter($key, $value);
         self::assertSame($value, $finalClass->getParameter($key));
     }
